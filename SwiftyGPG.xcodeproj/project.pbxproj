@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E763B0C2C1BCF8900D27D40 /* GPGConf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763B092C1BCD6400D27D40 /* GPGConf.swift */; };
+		3E763B0D2C1BCF8E00D27D40 /* GPGCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763B0A2C1BCD6400D27D40 /* GPGCore.swift */; };
+		3E763B152C1BD1C400D27D40 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763B142C1BD1C400D27D40 /* main.swift */; };
+		3E763B192C1BD1DC00D27D40 /* GPGCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763B0A2C1BCD6400D27D40 /* GPGCore.swift */; };
+		3E763B1A2C1BD1DC00D27D40 /* GPGConf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763B092C1BCD6400D27D40 /* GPGConf.swift */; };
 		3ECB53F82C1A780000A8427F /* SwiftyGPGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB53F72C1A780000A8427F /* SwiftyGPGApp.swift */; };
 		3ECB53FA2C1A780000A8427F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB53F92C1A780000A8427F /* ContentView.swift */; };
 		3ECB53FC2C1A780100A8427F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB53FB2C1A780100A8427F /* Assets.xcassets */; };
@@ -33,7 +38,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3E763B102C1BD1C400D27D40 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3E763B092C1BCD6400D27D40 /* GPGConf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPGConf.swift; sourceTree = "<group>"; };
+		3E763B0A2C1BCD6400D27D40 /* GPGCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPGCore.swift; sourceTree = "<group>"; };
+		3E763B122C1BD1C400D27D40 /* GPGCoreTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GPGCoreTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E763B142C1BD1C400D27D40 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3ECB53F42C1A780000A8427F /* SwiftyGPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyGPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECB53F72C1A780000A8427F /* SwiftyGPGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyGPGApp.swift; sourceTree = "<group>"; };
 		3ECB53F92C1A780000A8427F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3E763B0F2C1BD1C400D27D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3ECB53F12C1A780000A8427F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,12 +100,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E763B0B2C1BCF6E00D27D40 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				3E763B092C1BCD6400D27D40 /* GPGConf.swift */,
+				3E763B0A2C1BCD6400D27D40 /* GPGCore.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		3E763B132C1BD1C400D27D40 /* GPGCoreTest */ = {
+			isa = PBXGroup;
+			children = (
+				3E763B142C1BD1C400D27D40 /* main.swift */,
+			);
+			path = GPGCoreTest;
+			sourceTree = "<group>";
+		};
 		3ECB53EB2C1A780000A8427F = {
 			isa = PBXGroup;
 			children = (
 				3ECB53F62C1A780000A8427F /* SwiftyGPG */,
 				3ECB54082C1A780100A8427F /* SwiftyGPGTests */,
 				3ECB54122C1A780100A8427F /* SwiftyGPGUITests */,
+				3E763B132C1BD1C400D27D40 /* GPGCoreTest */,
 				3ECB53F52C1A780000A8427F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +134,7 @@
 				3ECB53F42C1A780000A8427F /* SwiftyGPG.app */,
 				3ECB54052C1A780100A8427F /* SwiftyGPGTests.xctest */,
 				3ECB540F2C1A780100A8427F /* SwiftyGPGUITests.xctest */,
+				3E763B122C1BD1C400D27D40 /* GPGCoreTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +142,7 @@
 		3ECB53F62C1A780000A8427F /* SwiftyGPG */ = {
 			isa = PBXGroup;
 			children = (
+				3E763B0B2C1BCF6E00D27D40 /* core */,
 				3ECB53F72C1A780000A8427F /* SwiftyGPGApp.swift */,
 				3ECB53F92C1A780000A8427F /* ContentView.swift */,
 				3ECB53FB2C1A780100A8427F /* Assets.xcassets */,
@@ -132,6 +180,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3E763B112C1BD1C400D27D40 /* GPGCoreTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E763B162C1BD1C400D27D40 /* Build configuration list for PBXNativeTarget "GPGCoreTest" */;
+			buildPhases = (
+				3E763B0E2C1BD1C400D27D40 /* Sources */,
+				3E763B0F2C1BD1C400D27D40 /* Frameworks */,
+				3E763B102C1BD1C400D27D40 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPGCoreTest;
+			productName = GPGCoreTest;
+			productReference = 3E763B122C1BD1C400D27D40 /* GPGCoreTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		3ECB53F32C1A780000A8427F /* SwiftyGPG */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ECB54192C1A780100A8427F /* Build configuration list for PBXNativeTarget "SwiftyGPG" */;
@@ -195,6 +260,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					3E763B112C1BD1C400D27D40 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					3ECB53F32C1A780000A8427F = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -224,6 +292,7 @@
 				3ECB53F32C1A780000A8427F /* SwiftyGPG */,
 				3ECB54042C1A780100A8427F /* SwiftyGPGTests */,
 				3ECB540E2C1A780100A8427F /* SwiftyGPGUITests */,
+				3E763B112C1BD1C400D27D40 /* GPGCoreTest */,
 			);
 		};
 /* End PBXProject section */
@@ -255,12 +324,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3E763B0E2C1BD1C400D27D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E763B152C1BD1C400D27D40 /* main.swift in Sources */,
+				3E763B192C1BD1DC00D27D40 /* GPGCore.swift in Sources */,
+				3E763B1A2C1BD1DC00D27D40 /* GPGConf.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3ECB53F02C1A780000A8427F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3ECB53FA2C1A780000A8427F /* ContentView.swift in Sources */,
 				3ECB53F82C1A780000A8427F /* SwiftyGPGApp.swift in Sources */,
+				3E763B0C2C1BCF8900D27D40 /* GPGConf.swift in Sources */,
+				3E763B0D2C1BCF8E00D27D40 /* GPGCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +378,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3E763B172C1BD1C400D27D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3E763B182C1BD1C400D27D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		3ECB54172C1A780100A8427F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +525,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftyGPG/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -453,6 +553,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftyGPG/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -475,6 +576,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QT93JJ48BC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
@@ -492,6 +594,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QT93JJ48BC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
@@ -536,6 +639,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E763B162C1BD1C400D27D40 /* Build configuration list for PBXNativeTarget "GPGCoreTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E763B172C1BD1C400D27D40 /* Debug */,
+				3E763B182C1BD1C400D27D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3ECB53EF2C1A780000A8427F /* Build configuration list for PBXProject "SwiftyGPG" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
