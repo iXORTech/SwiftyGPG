@@ -55,29 +55,30 @@ struct ContentView: View {
             }
             
         } detail: {
-            switch selection  {
-            case .number(let nr):
-                Text("Number \(nr)")
-                    .navigationTitle("Numbers")
-            case .tree(let tree):
-                Text("Tree element \(tree.name)")
-                    .navigationTitle("Tree")
-                
-            case nil:
-                Text("please choose")
-            }
-        } .inspector(isPresented: $showInspector) {
-            Text("Inspector")
-                .toolbar {
-                    Spacer()
-                    Button {
-                        showInspector.toggle()
-                    } label: {
-                        Label("Toggle Inspector", systemImage: "sidebar.right")
-                    }
+            HStack {
+                switch selection  {
+                case .number(let nr):
+                    Text("Number \(nr)")
+                        .navigationTitle("Numbers")
+                case .tree(let tree):
+                    Text("Tree element \(tree.name)")
+                        .navigationTitle("Tree")
+                    
+                case nil:
+                    Text("please choose")
                 }
-                .inspectorColumnWidth(min: 200, ideal: 300, max: 400)
+            }
+            .inspector(isPresented: $showInspector) {
+                Text("Inspector")
+                    .inspectorColumnWidth(min: 200, ideal: 300, max: 400)
+            }
         } .toolbar {
+            Spacer()
+            Button {
+                showInspector.toggle()
+            } label: {
+                Label("Toggle Inspector", systemImage: "sidebar.right")
+            }
         }
     }
 }
