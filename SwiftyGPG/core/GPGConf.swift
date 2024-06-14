@@ -7,18 +7,6 @@
 
 import Foundation
 
-extension URL {
-    var isDirectory: Bool {
-       (try? resourceValues(forKeys: [.isDirectoryKey]))?.isDirectory == true
-    }
-    var isRegularFile: Bool {
-        (try? resourceValues(forKeys: [.isRegularFileKey]))?.isRegularFile == true
-    }
-    var isAliasFile: Bool {
-        (try? resourceValues(forKeys: [.isAliasFileKey]))?.isAliasFile == true
-    }
-}
-
 func verifyGpgConfPath(path: String) -> Bool {
     let fileURL = URL(fileURLWithPath: path)
     let fileManager = FileManager.default
